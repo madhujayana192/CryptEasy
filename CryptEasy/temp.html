@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DES</title>
+    <link rel="stylesheet" href="/css/style1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <button id="goback" onclick="goBack()">Go Back</button>
+</div>
+<div class="container">
+    <p id="head-text">DES </p>
+    <p id="info">
+        DES, which stands for Data Encryption Standard, is a symmetric encryption algorithm that was widely used for securing electronic data until the early 2000s. It was developed by IBM in the 1970s and later adopted by the U.S. government as a standard for encrypting sensitive information.
+    </p>
+    <div class="cntnr1">
+        <label for="plaintext">Plain Text:</label>
+        <input type="text" id="plaintext" placeholder="Enter plain text">
+
+        <label for="key">Key:</label>
+        <input type="text" id="key" placeholder="Enter key"><br>
+    </div>
+    <button onclick="encryptIfValid()">Encrypt</button>
+    <button onclick="DESdecrypt()">Decrypt</button><br>
+
+    <label for="ciphertext">Cipher Text:</label>
+    <textarea id="ciphertext" rows="5" readonly></textarea><br>
+
+    <label for="decryptedtext">Decrypted Text:</label>
+    <textarea id="decryptedtext" rows="5" readonly></textarea>
+</div>
+
+<script>
+    function encryptIfValid() {
+        var plaintext = document.getElementById("plaintext").value;
+        var key = document.getElementById("key").value;
+
+        if (plaintext.trim() === "" || key.trim() === "") {
+            alert("Please fill both the Plain Text and Key fields.");
+        } else {
+            DESencrypt(plaintext, key);
+        }
+    }
+
+    function DESencrypt(plaintext, key) {
+        var encryptedText = CryptoJS.DES.encrypt(plaintext, key).toString();
+        document.getElementById("ciphertext").value = encryptedText;
+    }
+
+    function DESdecrypt() {
+        var ciphertext = document.getElementById("ciphertext").value;
+        var key = document.getElementById("key").value;
+
+        var decryptedText = CryptoJS.DES.decrypt(ciphertext, key).toString(CryptoJS.enc.Utf8);
+
+        document.getElementById("decryptedtext").value = decryptedText;
+    }
+</script>
+</body>
+</html>

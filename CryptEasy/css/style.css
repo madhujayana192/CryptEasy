@@ -1,0 +1,80 @@
+.header {
+  font-family: cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+
+#goback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+
+#goforward {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+  }
+
+
+  .container {
+    text-align: center;
+    align-items: flex-start; /* Updated alignment */
+  }
+
+
+  .img1 {
+    width: 200px;
+  }
+
+
+  #head-text {
+    font-size: 100px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+  button {
+    font-family: cursive;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  button:active {
+    background-color: #3e8940;
+  }

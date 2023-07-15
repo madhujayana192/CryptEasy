@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES</title>
+    <script src="/js/script1.js"></script>
+    <link rel="stylesheet" href="/css/style1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <button id="goback" onclick="goBack()">Go Back</button>
+    </div>
+    <div class="container">
+        <p id="head-text">AES </p>
+        <p id="info">
+            AES, which stands for Advanced Encryption Standard, is a widely used symmetric encryption algorithm. It was selected by the National Institute of Standards and Technology (NIST) in the United States to replace the older Data Encryption Standard (DES) in 2001.
+        </p>
+        <div class="cntnr1">
+            <label for="plaintext">Plain Text:</label>
+            <input type="text" id="plaintext" placeholder="Enter plain text">
+            
+            <label for="key">Key:</label>
+            <input type="text" id="key" placeholder="Enter key"><br>
+        </div> 
+          <button onclick="onSubmitAES()">Encrypt</button>
+          <button onclick="AESdecrypt()">Decrypt</button><br>
+          
+        <label for="ciphertext">Cipher Text:</label>
+        <textarea id="ciphertext" rows="5" readonly></textarea>
+        
+        <label for="decryptedtext">Decrypted Text:</label>
+        <textarea id="decryptedtext" rows="5" readonly></textarea>
+    </div>
+</body>
+</html>

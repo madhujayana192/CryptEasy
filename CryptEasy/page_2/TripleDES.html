@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripleDES</title>
+    <script src="/js/script1.js"></script>
+    <link rel="stylesheet" href="/css/style1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <button id="goback" onclick="goBack()">Go Back</button>
+</div>
+<div class="container">
+    <p id="head-text">TripleDES </p>
+    <p id="info">
+      Triple DES (3DES) is an encryption algorithm that is derived from the original Data Encryption Standard (DES). It is also known as TDEA (Triple Data Encryption Algorithm) and TDES. 3DES provides a higher level of security compared to DES by applying the DES algorithm multiple times in a specific pattern.</p>
+      <div class="cntnr1">
+        <label for="plaintext">Plain Text:</label>
+        <input type="text" id="plaintext" placeholder="Enter plain text">
+        
+        <label for="key">Key:</label>
+        <input type="text" id="key" placeholder="Enter key"><br>
+    </div> 
+  <button onclick="onSubmitTDES()">Encrypt</button>
+  <button onclick="TDESdecrypt()">Decrypt</button><br>
+  
+  <label for="ciphertext">Cipher Text:</label>
+  <textarea id="ciphertext" rows="5" readonly></textarea><br>
+  
+  <label for="decryptedtext">Decrypted Text:</label>
+  <textarea id="decryptedtext" rows="5" readonly></textarea>
+</body>
+</html>
